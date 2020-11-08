@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>999525025885-s8sf9kjliqqcpphrvvcb6g89s0aj5c2g.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.999525025885-s8sf9kjliqqcpphrvvcb6g89s0aj5c2g</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBx_sv5DFo3o2Nt5NSKHQATnyC8WSh7Its</string>
+	<key>GCM_SENDER_ID</key>
+	<string>999525025885</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.apple.mindful2</string>
+	<key>PROJECT_ID</key>
+	<string>mindful2-3a86c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mindful2-3a86c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:999525025885:ios:64beaa3487cb668f0965b4</string>
+	<key>DATABASE_URL</key>
+	<string>https://mindful2-3a86c.firebaseio.com</string>
+</dict>
+</plist>

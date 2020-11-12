@@ -81,7 +81,7 @@ class DashboardViewController:UIViewController, UITableViewDelegate, UITableView
                     var dateStr = ""
                     if (entry?.date != nil) {
                         let dateFormatterPrint = DateFormatter()
-                        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+                        dateFormatterPrint.dateFormat = "MMM dd,yyyy - HH:mm"
                         
                         anEntry.date = (entry?.date)!
 //                        print("Date: \(anEntry.date)")
@@ -121,7 +121,7 @@ class DashboardViewController:UIViewController, UITableViewDelegate, UITableView
             let activitiesFormatted = (allActivities.map{String($0)}).joined(separator: ", ") // format list of activities
             
             let dateFormatterPrint = DateFormatter()
-            dateFormatterPrint.dateFormat = "MMM dd, yyyy"
+            dateFormatterPrint.dateFormat = "MMM dd,yyyy - HH:mm"
             let dateStr = " \(dateFormatterPrint.string(from:e.date))"
             let tableString = "\(dateStr)\n\(moodStr) - \(activitiesFormatted)"
             moodList.append(tableString)

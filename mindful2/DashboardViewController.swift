@@ -92,6 +92,7 @@ class DashboardViewController:UIViewController, UITableViewDelegate, UITableView
                     print("~~~~~~~~~~~~~~~~~~~~~~~~~~")
                     print(tableString)
                     entryData.append(tableString)
+//                    self.myData = entryData
                     self.tableView.reloadData()
                 }
 //                print("----------TESTESTESTESTESTESTEST----------")

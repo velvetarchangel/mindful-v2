@@ -8,10 +8,14 @@ import Foundation
 import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FSCalendar
 
-class DashboardViewController:UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DashboardViewController:UIViewController, UITableViewDelegate, UITableViewDataSource,FSCalendarDelegate
+{
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var Calendar: FSCalendar!
     
     var db = Firestore.firestore() // reference to firebase database
     @Published var entryList: [Entry] = []
@@ -31,7 +35,7 @@ class DashboardViewController:UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        Calendar.delegate = self
         fetchData()
         
     }

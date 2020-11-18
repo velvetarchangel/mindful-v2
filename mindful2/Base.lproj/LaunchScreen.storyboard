@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,28 +11,35 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="t4t-y1-MNq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="919"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to MindFul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35Q-cu-jtJ">
-                                        <rect key="frame" x="123" y="107" width="155" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="ydM-WO-a2L"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home Page" translatesAutoresizingMaskIntoConstraints="NO" id="P1X-p0-Hcz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ze8-Z6-O7w">
+                                <rect key="frame" x="54" y="427" width="306.5" height="42"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Welcome to MindFul">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemBackgroundColor"/>
+                                            <font key="NSFont" size="36" name="DINAlternate-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="P1X-p0-Hcz" secondAttribute="bottom" id="4QG-ch-Glw"/>
+                            <constraint firstItem="P1X-p0-Hcz" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="HeM-QV-63R"/>
+                            <constraint firstAttribute="trailing" secondItem="P1X-p0-Hcz" secondAttribute="trailing" id="Hxz-bg-e9a"/>
+                            <constraint firstItem="P1X-p0-Hcz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="VuQ-bL-OeT"/>
+                            <constraint firstItem="ze8-Z6-O7w" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cIH-4m-Xfh"/>
+                            <constraint firstItem="ze8-Z6-O7w" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ryI-23-pii"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -42,6 +48,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Home Page" width="414" height="896"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

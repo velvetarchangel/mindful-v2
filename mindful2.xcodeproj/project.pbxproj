@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		922D8FB22553593A009621BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D8FB12553593A009621BA /* AppDelegate.swift */; };
+		922D8FB42553593A009621BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D8FB32553593A009621BA /* SceneDelegate.swift */; };
+		922D8FB62553593A009621BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D8FB52553593A009621BA /* ViewController.swift */; };
+		922D8FB92553593A009621BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922D8FB72553593A009621BA /* Main.storyboard */; };
+		922D8FBB25535943009621BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922D8FBA25535943009621BA /* Assets.xcassets */; };
+		922D8FBE25535943009621BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922D8FBC25535943009621BA /* LaunchScreen.storyboard */; };
+		922D8FDB2555C2EB009621BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 922D8FDA2555C2EB009621BA /* GoogleService-Info.plist */; };
+		922D8FEE255628A1009621BA /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D8FED255628A1009621BA /* Entry.swift */; };
+		922D8FF425562BBA009621BA /* EntryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D8FF325562BBA009621BA /* EntryRepository.swift */; };
+		922D902325564291009621BA /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D902225564291009621BA /* Mood.swift */; };
+		922D902625564440009621BA /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D902525564440009621BA /* Activity.swift */; };
+		922D90292556456A009621BA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D90282556456A009621BA /* Image.swift */; };
+		922D902C25564614009621BA /* EntryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D902B25564614009621BA /* EntryListViewModel.swift */; };
+		922D902F2556466E009621BA /* EntryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D902E2556466E009621BA /* EntryCellViewModel.swift */; };
+		922D903225588C35009621BA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D903125588C35009621BA /* DashboardViewController.swift */; };
+		F97DBA4B9F0F292D57634C67 /* Pods_mindful2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F858C386C80AEAFCCBCBBAC /* Pods_mindful2.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D4557FD026D2E2D26B7EA3D /* Pods-mindful2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindful2.release.xcconfig"; path = "Target Support Files/Pods-mindful2/Pods-mindful2.release.xcconfig"; sourceTree = "<group>"; };
+		5F858C386C80AEAFCCBCBBAC /* Pods_mindful2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mindful2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62D4A98C9AA03E7AD7AF29DD /* Pods-mindful2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindful2.debug.xcconfig"; path = "Target Support Files/Pods-mindful2/Pods-mindful2.debug.xcconfig"; sourceTree = "<group>"; };
+		922D8FAE2553593A009621BA /* mindful2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindful2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		922D8FB12553593A009621BA /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
+		922D8FB32553593A009621BA /* SceneDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; tabWidth = 2; };
+		922D8FB52553593A009621BA /* ViewController.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 2; };
+		922D8FB82553593A009621BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		922D8FBA25535943009621BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		922D8FBD25535943009621BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		922D8FBF25535943009621BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		922D8FDA2555C2EB009621BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		922D8FED255628A1009621BA /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		922D8FF325562BBA009621BA /* EntryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRepository.swift; sourceTree = "<group>"; };
+		922D902225564291009621BA /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		922D902525564440009621BA /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		922D90282556456A009621BA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		922D902B25564614009621BA /* EntryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListViewModel.swift; sourceTree = "<group>"; };
+		922D902E2556466E009621BA /* EntryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCellViewModel.swift; sourceTree = "<group>"; };
+		922D903125588C35009621BA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		922D8FAB2553593A009621BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F97DBA4B9F0F292D57634C67 /* Pods_mindful2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		51D6AF0DFA312A9474335E02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62D4A98C9AA03E7AD7AF29DD /* Pods-mindful2.debug.xcconfig */,
+				1D4557FD026D2E2D26B7EA3D /* Pods-mindful2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		922D8FA52553593A009621BA = {
+			isa = PBXGroup;
+			children = (
+				922D902125564247009621BA /* EntryListViewModel */,
+				922D8FF225562BA3009621BA /* Repository */,
+				922D8FEC25562874009621BA /* Model */,
+				922D8FB02553593A009621BA /* mindful2 */,
+				922D8FAF2553593A009621BA /* Products */,
+				51D6AF0DFA312A9474335E02 /* Pods */,
+				99B08F81E2F8D889275CB4E8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		922D8FAF2553593A009621BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				922D8FAE2553593A009621BA /* mindful2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		922D8FB02553593A009621BA /* mindful2 */ = {
+			isa = PBXGroup;
+			children = (
+				922D8FB12553593A009621BA /* AppDelegate.swift */,
+				922D8FB32553593A009621BA /* SceneDelegate.swift */,
+				922D8FB52553593A009621BA /* ViewController.swift */,
+				922D903125588C35009621BA /* DashboardViewController.swift */,
+				922D8FB72553593A009621BA /* Main.storyboard */,
+				922D8FBA25535943009621BA /* Assets.xcassets */,
+				922D8FBC25535943009621BA /* LaunchScreen.storyboard */,
+				922D8FBF25535943009621BA /* Info.plist */,
+				922D8FDA2555C2EB009621BA /* GoogleService-Info.plist */,
+			);
+			path = mindful2;
+			sourceTree = "<group>";
+		};
+		922D8FEC25562874009621BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				922D8FED255628A1009621BA /* Entry.swift */,
+				922D902225564291009621BA /* Mood.swift */,
+				922D902525564440009621BA /* Activity.swift */,
+				922D90282556456A009621BA /* Image.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		922D8FF225562BA3009621BA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				922D8FF325562BBA009621BA /* EntryRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		922D902125564247009621BA /* EntryListViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				922D902B25564614009621BA /* EntryListViewModel.swift */,
+				922D902E2556466E009621BA /* EntryCellViewModel.swift */,
+			);
+			path = EntryListViewModel;
+			sourceTree = "<group>";
+		};
+		99B08F81E2F8D889275CB4E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F858C386C80AEAFCCBCBBAC /* Pods_mindful2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		922D8FAD2553593A009621BA /* mindful2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 922D8FC225535943009621BA /* Build configuration list for PBXNativeTarget "mindful2" */;
+			buildPhases = (
+				2A9E1FE7AF88D003FF2D4D97 /* [CP] Check Pods Manifest.lock */,
+				922D8FAA2553593A009621BA /* Sources */,
+				922D8FAB2553593A009621BA /* Frameworks */,
+				922D8FAC2553593A009621BA /* Resources */,
+				D63FDDACC7EA462635AFE9E9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mindful2;
+			productName = mindful2;
+			productReference = 922D8FAE2553593A009621BA /* mindful2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		922D8FA62553593A009621BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					922D8FAD2553593A009621BA = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 922D8FA92553593A009621BA /* Build configuration list for PBXProject "mindful2" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 922D8FA52553593A009621BA;
+			productRefGroup = 922D8FAF2553593A009621BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				922D8FAD2553593A009621BA /* mindful2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		922D8FAC2553593A009621BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922D8FBE25535943009621BA /* LaunchScreen.storyboard in Resources */,
+				922D8FDB2555C2EB009621BA /* GoogleService-Info.plist in Resources */,
+				922D8FBB25535943009621BA /* Assets.xcassets in Resources */,
+				922D8FB92553593A009621BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A9E1FE7AF88D003FF2D4D97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mindful2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D63FDDACC7EA462635AFE9E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mindful2/Pods-mindful2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mindful2/Pods-mindful2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mindful2/Pods-mindful2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		922D8FAA2553593A009621BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				922D8FEE255628A1009621BA /* Entry.swift in Sources */,
+				922D90292556456A009621BA /* Image.swift in Sources */,
+				922D8FB62553593A009621BA /* ViewController.swift in Sources */,
+				922D902F2556466E009621BA /* EntryCellViewModel.swift in Sources */,
+				922D902625564440009621BA /* Activity.swift in Sources */,
+				922D8FB22553593A009621BA /* AppDelegate.swift in Sources */,
+				922D902C25564614009621BA /* EntryListViewModel.swift in Sources */,
+				922D8FB42553593A009621BA /* SceneDelegate.swift in Sources */,
+				922D903225588C35009621BA /* DashboardViewController.swift in Sources */,
+				922D902325564291009621BA /* Mood.swift in Sources */,
+				922D8FF425562BBA009621BA /* EntryRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		922D8FB72553593A009621BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				922D8FB82553593A009621BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		922D8FBC25535943009621BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				922D8FBD25535943009621BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		922D8FC025535943009621BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		922D8FC125535943009621BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		922D8FC325535943009621BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62D4A98C9AA03E7AD7AF29DD /* Pods-mindful2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KANGHK24W;
+				INFOPLIST_FILE = mindful2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.apple.mindful2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		922D8FC425535943009621BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D4557FD026D2E2D26B7EA3D /* Pods-mindful2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4KANGHK24W;
+				INFOPLIST_FILE = mindful2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.apple.mindful2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		922D8FA92553593A009621BA /* Build configuration list for PBXProject "mindful2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922D8FC025535943009621BA /* Debug */,
+				922D8FC125535943009621BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		922D8FC225535943009621BA /* Build configuration list for PBXNativeTarget "mindful2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				922D8FC325535943009621BA /* Debug */,
+				922D8FC425535943009621BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 922D8FA62553593A009621BA /* Project object */;
+}

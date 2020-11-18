@@ -71,7 +71,6 @@ class ViewController:UIViewController{
       currentActivities.insert(exercise)
     }
     print(currentActivities)
-    
   }
   
   @IBAction func socialize(_ sender: UIButton, forEvent event: UIEvent) {

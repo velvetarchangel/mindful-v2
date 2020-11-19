@@ -122,8 +122,13 @@ class ViewController:UIViewController{
    Button that will move the view to the dashboard view
    */
   @IBAction func goToDasboard(_ sender: UIButton, forEvent event: UIEvent){
-    print("Going to dashboard")
-    self.performSegue(withIdentifier: "DashboardViewSegue", sender: self)
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    let secondVC = storyboard.instantiateViewController(identifier: "Dashboard2")
+    
+    secondVC.modalPresentationStyle = .fullScreen
+    secondVC.modalTransitionStyle = .crossDissolve
+    
+    present(secondVC, animated: true, completion: nil)
   }
   
   func setCurrentDate() {

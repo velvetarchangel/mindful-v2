@@ -10,7 +10,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FSCalendar
 
-class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,FSCalendarDelegate,FSCalendarDataSource
+class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,FSCalendarDelegate,FSCalendarDataSource,FSCalendarDelegateAppearance
 {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var Calendar: FSCalendar!
@@ -21,6 +21,10 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     var myData = ["first", "second", "third", "fourth", "fifth"]
     var calendarFormatter = DateFormatter()
     
+    //MARK :- Delete later
+    var event = ["2020-11-08", "2020-11-09"]
+    var fillSelectionColors = ["2020-11-10", "2020-11-11"]
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         tableView.delegate = self
@@ -28,11 +32,44 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         Calendar.delegate = self
         Calendar.dataSource = self
         Calendar.scrollDirection = .horizontal
+        Calendar.register(FSCalendarCell.self, forCellReuseIdentifier: "calendarcell")
         fetchData()
     }
     
     override func didReceiveMemoryWarning(){
         super.didReceiveMemoryWarning()
+    }
+    
+//  **somehow parse data and figure out logic to change background color here**
+//  func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
+//        var colorBackgrounds = [UIImage]() //HAVE ALL THE POSSIBLE IMAGES
+//
+//        /*
+//         if DATE IS THE SAME AND EMOTION = HAPPY -> RETURN HAPPY
+//         ...
+//         */
+//        return UIImage(named: "happyback2.png")
+//    }
+    
+//    func calendar(_ calendar: FSCalendar!, imageFor date: NSDate!) -> UIImage! {
+//        return UIImage(named: "happyback2.png")
+//    }
+    
+    //DATE FORMATTER 2
+    fileprivate lazy var dateFormatter2: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+
+    private func calendar(_ calendar:FSCalendar, appearance: FSCalendarAppearance, eventDefaultColorsFor date: Date) -> UIColor? {
+        return UIColor.purple
+    }
+    
+    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
+        let cell = Calendar.dequeueReusableCell(withIdentifier: "calendarcell", for: date, at: position)
+        cell.imageView.contentMode = .scaleAspectFit
+        return cell
     }
     
     func fetchData(){

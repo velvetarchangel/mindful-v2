@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -344,77 +344,18 @@
                     <navigationItem key="navigationItem" id="LtS-kq-hgn"/>
                     <connections>
                         <outlet property="currentDate" destination="Nzh-j0-per" id="36t-Dn-3LT"/>
-                        <segue destination="ruy-6K-0WQ" kind="showDetail" identifier="DashboardViewSegue" id="Ltm-3r-s4h"/>
+                        <segue destination="9Pd-BQ-1je" kind="showDetail" identifier="DashboardViewSegue" id="Ltm-3r-s4h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.2" y="63.546798029556655"/>
         </scene>
-        <!--Title-->
-        <scene sceneID="hx9-w9-DBZ">
+        <!--Dashboard-->
+        <scene sceneID="cMS-HF-odo">
             <objects>
-                <viewController id="ruy-6K-0WQ" customClass="DashboardViewController" customModule="mindful2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" clipsSubviews="YES" contentMode="scaleAspectFit" id="jh2-gT-i6s">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Dashboard View " textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8W6-Pj-RXp">
-                                <rect key="frame" x="94" y="0.0" width="320" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="U7h-tq-v8Z">
-                                <rect key="frame" x="0.0" y="29" width="414" height="361"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="v0j-ye-xiS">
-                                        <rect key="frame" x="0.0" y="55.333332061767578" width="414" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v0j-ye-xiS" id="lI6-sw-t0g">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7iU-Ty-O6g" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="385" width="414" height="360"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="pagingEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="scrollEnabled" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
-                                        <color key="value" systemColor="systemPurpleColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="MYt-Ab-y9X"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="U7h-tq-v8Z" firstAttribute="top" secondItem="8W6-Pj-RXp" secondAttribute="bottom" id="5ab-Ep-Umz"/>
-                            <constraint firstItem="8W6-Pj-RXp" firstAttribute="top" secondItem="MYt-Ab-y9X" secondAttribute="top" id="9Yn-4H-hGt"/>
-                            <constraint firstItem="MYt-Ab-y9X" firstAttribute="trailing" secondItem="8W6-Pj-RXp" secondAttribute="trailing" id="CqA-uU-awF"/>
-                            <constraint firstItem="U7h-tq-v8Z" firstAttribute="leading" secondItem="MYt-Ab-y9X" secondAttribute="leading" id="EHn-wu-vyG"/>
-                            <constraint firstItem="8W6-Pj-RXp" firstAttribute="leading" secondItem="MYt-Ab-y9X" secondAttribute="leading" id="EwW-ie-dW0"/>
-                            <constraint firstItem="MYt-Ab-y9X" firstAttribute="bottom" secondItem="U7h-tq-v8Z" secondAttribute="bottom" id="MIO-In-v64"/>
-                            <constraint firstItem="MYt-Ab-y9X" firstAttribute="trailing" secondItem="U7h-tq-v8Z" secondAttribute="trailing" id="PJK-D6-kX6"/>
-                            <constraint firstItem="U7h-tq-v8Z" firstAttribute="top" secondItem="8W6-Pj-RXp" secondAttribute="bottom" id="b1t-wm-Z9q"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="xC7-nl-Kfg"/>
-                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="Calendar" destination="7iU-Ty-O6g" id="Gt3-QC-cVl"/>
-                        <outlet property="tableView" destination="U7h-tq-v8Z" id="eba-la-vMh"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lhv-Cu-wBM" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Dashboard" id="9Pd-BQ-1je" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mbO-6F-yXb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1992.753623188406" y="63.616071428571423"/>
         </scene>
@@ -437,9 +378,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="groupBackground" translatesAutoresizingMaskIntoConstraints="NO" id="u9v-HD-vBb">
-                                <rect key="frame" x="13" y="203" width="346" height="232"/>
+                                <rect key="frame" x="13" y="186" width="346" height="249"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mL7-Jh-MHF">
@@ -93,15 +93,18 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KtU-VQ-DMl">
-                                <rect key="frame" x="257" y="211" width="30" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KtU-VQ-DMl">
+                                <rect key="frame" x="216" y="314" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
+                                <inset key="titleEdgeInsets" minX="0.0" minY="75" maxX="70" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="20"/>
+                                <state key="normal" image="bad">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Sad">
                                             <attributes>
                                                 <color key="NSColor" red="0.98039215686274506" green="0.53725490196078429" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -110,15 +113,18 @@
                                     <action selector="sadButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gg-VP-0nm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-82-1Zr">
-                                <rect key="frame" x="81" y="211" width="48" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-82-1Zr">
+                                <rect key="frame" x="56" y="198" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
+                                <inset key="titleEdgeInsets" minX="0.0" minY="75" maxX="70" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="20"/>
+                                <state key="normal" image="happy">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Happy">
                                             <attributes>
                                                 <color key="NSColor" red="0.396078431372549" green="0.75294117647058822" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -141,100 +147,18 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0p7-SF-9vF">
-                                <rect key="frame" x="276" y="491" width="65" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vne-1R-9AZ">
+                                <rect key="frame" x="58" y="314" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Exercise">
-                                            <attributes>
-                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="exercise:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2fc-Xn-wKY"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8I-3l-h0f">
-                                <rect key="frame" x="283" y="599" width="46" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Relax">
-                                            <attributes>
-                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="relax:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hjo-dG-QdR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aal-Gl-ibZ">
-                                <rect key="frame" x="53" y="492" width="62" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Eat Well">
-                                            <attributes>
-                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="eatWellButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AXu-sz-3Br"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hf-Nb-4ra">
-                                <rect key="frame" x="53" y="599" width="67" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Socialize">
-                                            <attributes>
-                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="socialize:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txF-Rh-R7G"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ow-VR-fea">
-                                <rect key="frame" x="163" y="599" width="62" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Hobbies">
-                                            <attributes>
-                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="hobbies:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSQ-LD-0G9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vne-1R-9AZ">
-                                <rect key="frame" x="91" y="321" width="33" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
+                                <inset key="titleEdgeInsets" minX="0.0" minY="75" maxX="70" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="20"/>
+                                <state key="normal" image="meh">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Meh">
                                             <attributes>
                                                 <color key="NSColor" red="0.98039215686274506" green="0.72156862745098038" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -243,15 +167,18 @@
                                     <action selector="mehButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="108-rl-Vnk"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbM-a1-VDD">
-                                <rect key="frame" x="242" y="321" width="58" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbM-a1-VDD">
+                                <rect key="frame" x="217" y="198" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
+                                <inset key="titleEdgeInsets" minX="0.0" minY="75" maxX="70" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="20"/>
+                                <state key="normal" image="content">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Content">
                                             <attributes>
                                                 <color key="NSColor" red="0.61568627450980395" green="0.80000000000000004" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -260,63 +187,6 @@
                                     <action selector="contentButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5m-ys-69O"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tz6-AQ-nEJ">
-                                <rect key="frame" x="155" y="491" width="80" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Sleep Well">
-                                            <attributes>
-                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="sleepWell:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmW-wv-zTn"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="happy" translatesAutoresizingMaskIntoConstraints="NO" id="5az-kN-MCj">
-                                <rect key="frame" x="69" y="237" width="73" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bad" translatesAutoresizingMaskIntoConstraints="NO" id="osb-A7-CEK">
-                                <rect key="frame" x="235" y="236" width="73" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="meh" translatesAutoresizingMaskIntoConstraints="NO" id="PrH-YW-OR8">
-                                <rect key="frame" x="69" y="345" width="73" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Apple" translatesAutoresizingMaskIntoConstraints="NO" id="JNg-0m-Hn7">
-                                <rect key="frame" x="56" y="520" width="54" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sleep" translatesAutoresizingMaskIntoConstraints="NO" id="IIp-Ro-wBX">
-                                <rect key="frame" x="167" y="520" width="54" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dumbell" translatesAutoresizingMaskIntoConstraints="NO" id="5sZ-41-hn7">
-                                <rect key="frame" x="279" y="520" width="54" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="People" translatesAutoresizingMaskIntoConstraints="NO" id="Dbc-bM-4tS">
-                                <rect key="frame" x="56" y="626" width="54" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hobby" translatesAutoresizingMaskIntoConstraints="NO" id="bAh-Kg-d34">
-                                <rect key="frame" x="167" y="625" width="54" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Meditate" translatesAutoresizingMaskIntoConstraints="NO" id="WpV-cn-Ljw">
-                                <rect key="frame" x="279" y="627" width="54" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="content" translatesAutoresizingMaskIntoConstraints="NO" id="GAT-hX-4BJ">
-                                <rect key="frame" x="235" y="343" width="73" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzh-j0-per">
                                 <rect key="frame" x="0.0" y="73" width="375" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -331,6 +201,126 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aal-Gl-ibZ">
+                                <rect key="frame" x="43" y="505" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-65" maxX="57" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="12" minY="20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="Apple">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Eat Well">
+                                            <attributes>
+                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="eatWellButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AXu-sz-3Br"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tz6-AQ-nEJ">
+                                <rect key="frame" x="147" y="505" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-65" maxX="57" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="12" minY="20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="Sleep">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Sleep Well">
+                                            <attributes>
+                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="sleepWell:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmW-wv-zTn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0p7-SF-9vF">
+                                <rect key="frame" x="253" y="505" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-65" maxX="57" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="12" minY="20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="dumbell">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Exercise">
+                                            <attributes>
+                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="exercise:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2fc-Xn-wKY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Hf-Nb-4ra">
+                                <rect key="frame" x="43" y="613" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-65" maxX="57" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="12" minY="20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="People">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Socialize">
+                                            <attributes>
+                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="socialize:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txF-Rh-R7G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ow-VR-fea">
+                                <rect key="frame" x="147" y="613" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-65" maxX="57" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="12" minY="20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="Hobby">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Hobbies">
+                                            <attributes>
+                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="hobbies:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kSQ-LD-0G9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U8I-3l-h0f">
+                                <rect key="frame" x="253" y="613" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="-65" maxX="57" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="12" minY="20" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" image="Meditate">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Relax">
+                                            <attributes>
+                                                <color key="NSColor" red="0.30980392156862746" green="0.76078431372549016" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name="DINAlternate-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="relax:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hjo-dG-QdR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

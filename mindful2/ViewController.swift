@@ -133,7 +133,7 @@ class ViewController:UIViewController{
   
   func setCurrentDate() {
     let dateFormatterPrint = DateFormatter()
-    dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+    dateFormatterPrint.dateFormat = "MMM dd, yyyy"
 
     let exactlyCurrentTime: Date = Date()
     currentDate.text = " \(dateFormatterPrint.string(from: exactlyCurrentTime))"

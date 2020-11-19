@@ -10,34 +10,25 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FSCalendar
 
-class DashboardViewController:UIViewController, UITableViewDelegate, UITableViewDataSource,FSCalendarDelegate
+class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,FSCalendarDelegate,FSCalendarDataSource
 {
-    
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var Calendar: FSCalendar!
-    
     var db = Firestore.firestore() // reference to firebase database
     @Published var entryList: [Entry] = []
     @Published var entryRepository = EntryRepository()
     
     var myData = ["first", "second", "third", "fourth", "fifth"]
-
-    //initialize a repository object
-    
-    //List of 5 latest entries
-        //load data and filter the data
-    
-    //Calendar
-    //Graph
+    var calendarFormatter = DateFormatter()
     
     override func viewDidLoad(){
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         Calendar.delegate = self
+        Calendar.dataSource = self
+        Calendar.scrollDirection = .horizontal
         fetchData()
-        
     }
     
     override func didReceiveMemoryWarning(){

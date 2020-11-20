@@ -19,12 +19,21 @@ class ViewController:UIViewController{
   @IBOutlet weak var mehButton: UIButton!
   @IBOutlet weak var sadButton: UIButton!
   
+  // activity buttons
+  @IBOutlet weak var eatBtn: UIButton!
+  @IBOutlet weak var sleepBtn: UIButton!
+  @IBOutlet weak var exerciseBtn: UIButton!
+  @IBOutlet weak var socializeBtn: UIButton!
+  @IBOutlet weak var hobbiesBtn: UIButton!
+  @IBOutlet weak var relaxBtn: UIButton!
+  
+  
   var currentMood : Mood = Mood(mood: "")
   //set of activities (if the activity is in the set removes it otherwise adds it)
   var currentActivities = Set<Activity>()
   let db = Firestore.firestore()
   @Published var entryRepository = EntryRepository()
-  //Mood buttons
+  //Mood button actions on tap
   @IBAction func happyButton(_ sender: UIButton, forEvent event: UIEvent) {
     currentMood.mood = "Happy"
     // change the happy button background color and clear all other button backgrounds
@@ -65,14 +74,16 @@ class ViewController:UIViewController{
     print("Current mood is " + currentMood.mood!)
   }
   
-  //Activity Buttons
+  //Activity Button actions on tap
   @IBAction func eatWellButton(_ sender: UIButton, forEvent event: UIEvent) {
     let eatwell = Activity(activity: "Eat Well")
     
     if(currentActivities.contains(eatwell)){
       currentActivities.remove(eatwell)
+      eatBtn.backgroundColor = nil
     }else{
       currentActivities.insert(eatwell)
+      eatBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
     print(currentActivities)
   }
@@ -82,8 +93,10 @@ class ViewController:UIViewController{
     
     if(currentActivities.contains(sleepwell)){
       currentActivities.remove(sleepwell)
+      sleepBtn.backgroundColor = nil
     }else{
       currentActivities.insert(sleepwell)
+      sleepBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
     print(currentActivities)
   }
@@ -93,8 +106,10 @@ class ViewController:UIViewController{
     
     if(currentActivities.contains(exercise)){
       currentActivities.remove(exercise)
+      exerciseBtn.backgroundColor = nil
     }else{
       currentActivities.insert(exercise)
+      exerciseBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
     print(currentActivities)
   }
@@ -104,8 +119,10 @@ class ViewController:UIViewController{
     
     if(currentActivities.contains(socialize)){
       currentActivities.remove(socialize)
+      socializeBtn.backgroundColor = nil
     }else{
       currentActivities.insert(socialize)
+      socializeBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
     print(currentActivities)
   }
@@ -115,8 +132,10 @@ class ViewController:UIViewController{
     
     if(currentActivities.contains(hobbies)){
       currentActivities.remove(hobbies)
+      hobbiesBtn.backgroundColor = nil
     }else{
       currentActivities.insert(hobbies)
+      hobbiesBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
     print(currentActivities)
   }
@@ -127,8 +146,10 @@ class ViewController:UIViewController{
     
     if(currentActivities.contains(relax)){
       currentActivities.remove(relax)
+      relaxBtn.backgroundColor = nil
     }else{
       currentActivities.insert(relax)
+      relaxBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
     print(currentActivities)
   }

@@ -94,10 +94,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KtU-VQ-DMl">
-                                <rect key="frame" x="216" y="314" width="100" height="100"/>
+                                <rect key="frame" x="211" y="314" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="75" maxX="70" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="20"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="65" maxX="70" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="25"/>
                                 <state key="normal" image="bad">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Sad">
@@ -109,6 +109,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sadButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9gg-VP-0nm"/>
                                 </connections>
@@ -116,8 +119,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PzO-82-1Zr">
                                 <rect key="frame" x="56" y="198" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="75" maxX="70" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="20"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="65" maxX="70" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="25"/>
                                 <state key="normal" image="happy">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Happy">
@@ -129,6 +132,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="happyButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w8N-el-j6t"/>
                                 </connections>
@@ -150,8 +156,8 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vne-1R-9AZ">
                                 <rect key="frame" x="58" y="314" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="75" maxX="70" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="20"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="65" maxX="70" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="25"/>
                                 <state key="normal" image="meh">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Meh">
@@ -163,15 +169,18 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="mehButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="108-rl-Vnk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbM-a1-VDD">
-                                <rect key="frame" x="217" y="198" width="100" height="100"/>
+                                <rect key="frame" x="212" y="198" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="0.0" minY="75" maxX="70" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="20"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="65" maxX="70" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="25"/>
                                 <state key="normal" image="content">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Content">
@@ -183,6 +192,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="contentButton:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E5m-ys-69O"/>
                                 </connections>
@@ -333,7 +345,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="LtS-kq-hgn"/>
                     <connections>
+                        <outlet property="contentButton" destination="MbM-a1-VDD" id="2Gb-cY-8KR"/>
                         <outlet property="currentDate" destination="Nzh-j0-per" id="36t-Dn-3LT"/>
+                        <outlet property="happyButton" destination="PzO-82-1Zr" id="MUQ-jc-TIJ"/>
+                        <outlet property="mehButton" destination="vne-1R-9AZ" id="1S3-Y5-PAk"/>
+                        <outlet property="sadButton" destination="KtU-VQ-DMl" id="4l5-j6-SJo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,6 +13,12 @@ class ViewController:UIViewController{
 
   @IBOutlet weak var currentDate: UILabel!
   
+  // mood buttons
+  @IBOutlet weak var happyButton: UIButton!
+  @IBOutlet weak var contentButton: UIButton!
+  @IBOutlet weak var mehButton: UIButton!
+  @IBOutlet weak var sadButton: UIButton!
+  
   var currentMood : Mood = Mood(mood: "")
   //set of activities (if the activity is in the set removes it otherwise adds it)
   var currentActivities = Set<Activity>()
@@ -21,21 +27,41 @@ class ViewController:UIViewController{
   //Mood buttons
   @IBAction func happyButton(_ sender: UIButton, forEvent event: UIEvent) {
     currentMood.mood = "Happy"
+    // change the happy button background color and clear all other button backgrounds
+    happyButton.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+    contentButton.backgroundColor = nil
+    mehButton.backgroundColor = nil
+    sadButton.backgroundColor = nil
     print("Current mood is " + currentMood.mood!)
   }
   
   @IBAction func sadButton(_ sender: UIButton, forEvent event: UIEvent) {
     currentMood.mood = "Sad"
+    // change the sad button background color and clear all other button backgrounds
+    happyButton.backgroundColor = nil
+    contentButton.backgroundColor = nil
+    mehButton.backgroundColor = nil
+    sadButton.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
     print("Current mood is " + currentMood.mood!)
   }
   
   @IBAction func mehButton(_ sender: UIButton, forEvent event: UIEvent) {
     currentMood.mood = "Meh"
+    // change the meh button background color and clear all other button backgrounds
+    happyButton.backgroundColor = nil
+    contentButton.backgroundColor = nil
+    mehButton.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+    sadButton.backgroundColor = nil
     print("Current mood is " + currentMood.mood!)
   }
   
   @IBAction func contentButton(_ sender: UIButton, forEvent event: UIEvent) {
     currentMood.mood = "Content"
+    // change the content button background color and clear all other button backgrounds
+    happyButton.backgroundColor = nil
+    contentButton.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
+    mehButton.backgroundColor = nil
+    sadButton.backgroundColor = nil
     print("Current mood is " + currentMood.mood!)
   }
   

@@ -21,4 +21,13 @@ struct Entry: Codable, Identifiable {
         self.mood = Mood(mood: nil)
         self.activities = [Activity(activity: nil)]
     }
+    
+    /*
+     For testing purposes
+     */
+    init(date: Date, mood: Mood, activities: [Activity]) {
+        self.date = date
+        self.mood = mood
+        self.activities = activities
+    }
 }

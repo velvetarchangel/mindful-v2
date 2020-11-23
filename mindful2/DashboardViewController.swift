@@ -15,7 +15,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var Calendar: FSCalendar!
     var db = Firestore.firestore() // reference to firebase database
-    @Published var entryList: [Entry] = []
+    @Published var entryList: [Entry] = [] // when you pull data it will go here
     @Published var entryRepository = EntryRepository()
     
     var myData = ["first", "second", "third", "fourth", "fifth"]
@@ -23,8 +23,10 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //MARK :- Delete later
     var event = ["2020-11-08", "2020-11-09"]
-    var fillSelectionColors = ["2020-11-10", "2020-11-11"]
-    
+//    var fillSelectionColors = [Entry(date: Date("2020-11-10"), mood: "Happy", Activities: []),
+//                               Entry(date: Date("2020-11-11"), mood: "Sad", Activities: []),
+//                            ]
+        
     override func viewDidLoad(){
         super.viewDidLoad()
         tableView.delegate = self
@@ -40,6 +42,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         super.didReceiveMemoryWarning()
     }
     
+    
 //  **somehow parse data and figure out logic to change background color here**
 //  func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
 //        var colorBackgrounds = [UIImage]() //HAVE ALL THE POSSIBLE IMAGES
@@ -50,10 +53,30 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
 //         */
 //        return UIImage(named: "happyback2.png")
 //    }
-    
-//    func calendar(_ calendar: FSCalendar!, imageFor date: NSDate!) -> UIImage! {
-//        return UIImage(named: "happyback2.png")
-//    }
+
+    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
+        var picture = UIImage(named:"happyback2.png")
+        
+//        db.collection("entries").order(by: "date").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting data : \(err)")
+//            }else {
+//                var entryMoodString = ""
+//                for document in querySnapshot!.documents {
+//                    let entry = try? document.data(as: Entry.self)
+//                    if (entry?.mood == nil) {
+//                        print("Not logged today")
+//                    }else{
+//                        let moodWrap = (entry?.mood)!
+//                        entryMoodString = (moodWrap.mood)! // mood as a String
+//                        print("\(entry?.date) + \(entryMoodString)")
+//                    }
+//                }
+//                self.tableView.reloadData()
+//            }
+//        }
+        return picture
+    }
     
     //DATE FORMATTER 2
     fileprivate lazy var dateFormatter2: DateFormatter = {
@@ -68,7 +91,8 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
         let cell = Calendar.dequeueReusableCell(withIdentifier: "calendarcell", for: date, at: position)
-        cell.imageView.contentMode = .scaleAspectFit
+        cell.clipsToBounds = true
+        cell.contentMode = .center
         return cell
     }
     
@@ -121,8 +145,8 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                     }
                     self.entryList.append(anEntry) // append to list of entries
                     let tableString = "\(moodStr) - \(activitiesStr) on \(dateStr)"
-                    print("~~~~~~~~~~~~~~~~~~~~~~~~~~")
-                    print(tableString)
+//                    print("~~~~~~~~~~~~~~~~~~~~~~~~~~")
+//                    print(tableString)
                     entryData.append(tableString)
 //                    self.myData = entryData
                     self.tableView.reloadData()
@@ -139,17 +163,17 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // test to list all entries in a list of Entries
     func listEntries() {
-        print("------------- list entries function --------------")
+//        print("------------- list entries function --------------")
         var moodList: [String] = []
         for e in self.entryList {
 //            print("MOOD")
             let moodStr = (e.mood.mood) ?? "none"
-            print("MOOD: \(moodStr)")
+//            print("MOOD: \(moodStr)")
             var allActivities: [String] = []
             for a in (e.activities) {
                 let activityStr = (a.activity) ?? ""
                 allActivities.append(activityStr)
-                print("Activity: \(String(describing: a.activity))")
+//                print("Activity: \(String(describing: a.activity))")
             }
             let activitiesFormatted = (allActivities.map{String($0)}).joined(separator: ", ") // format list of activities
             

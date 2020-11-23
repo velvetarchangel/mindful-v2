@@ -21,10 +21,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     var myData = ["first", "second", "third", "fourth", "fifth"]
     var calendarFormatter = DateFormatter()
     var fillDefaultColors : [String: UIColor] = [:]
-    
-    //MARK :- Delete later
-    var event = ["2020-11-08", "2020-11-09"]
-    
+
     override func viewDidLoad(){
         super.viewDidLoad()
         tableView.delegate = self
@@ -70,13 +67,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
-    /*
-        This function is supposed to keep an array of dates and figure out which color each one should be. It should populate the fill default array which can then be read in order to fill out the colors on the calendar.
-     */
-    func populateFillDefaultColors() {
-        
-    }
-    
+
     // sets the maximum date that the user can select - maximum date is set to current date, which user cannot select beyond
     func maximumDate(for calendar: FSCalendar) -> Date {
         return Date()
@@ -149,16 +140,18 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                         activitiesStr = (activityList.map{String($0)}).joined(separator: ", ")
                     }
                     
-                    var dateStr = ""
+                    var dateStr = ""        //THIS IS FOR THE TABLEVIEW
                     var bgDateStr = ""      // THIS IS FOR THE BACKGROUND FILL ARRAY
                     if (entry?.date != nil) {
+                        
                         let dateFormatterPrint = DateFormatter()
                         dateFormatterPrint.dateFormat = "MMM dd,yyyy - HH:mm"
+                        
                         let bgDateFormatterPrint = DateFormatter()
                         bgDateFormatterPrint.dateFormat = "yyyy/MM/dd"
                         
                         anEntry.date = (entry?.date)!
-//                        print("Date: \(anEntry.date)")
+                        
                         dateStr = " \(dateFormatterPrint.string(from: anEntry.date))"
                         bgDateStr = "\(bgDateFormatterPrint.string(from: anEntry.date))"
                         if (self.fillDefaultColors[bgDateStr] == nil){
@@ -181,6 +174,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                     entryData.append(tableString)
 //                    self.myData = entryData
                     self.tableView.reloadData()
+                    self.Calendar.reloadData()
                 }
 //                print("----------TESTESTESTESTESTESTEST----------")
 //                self.myData = entryData

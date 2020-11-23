@@ -164,7 +164,24 @@ class ViewController:UIViewController{
     //use the repository to add the entry
     entryRepository.addEntry(currentEntry)
     
+    // clear all button background colours
+    clearAllBtnBackground()
   }
+  
+  // clears all button background colours, regardless if it was selected or not
+  func clearAllBtnBackground() {
+    happyButton.backgroundColor = nil
+    contentButton.backgroundColor = nil
+    mehButton.backgroundColor = nil
+    sadButton.backgroundColor = nil
+    eatBtn.backgroundColor = nil
+    sleepBtn.backgroundColor = nil
+    exerciseBtn.backgroundColor = nil
+    socializeBtn.backgroundColor = nil
+    hobbiesBtn.backgroundColor = nil
+    relaxBtn.backgroundColor = nil
+  }
+  
   /*
    Button that will move the view to the dashboard view
    */

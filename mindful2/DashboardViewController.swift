@@ -83,10 +83,12 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             dateFormat.dateFormat = "yyyy-MM-dd"
             let dateStr = " \(dateFormat.string(from:entry.date))"
             
-            // if current date ac
+            var moodThatDay = ""
+            // if the selected date matches the date the entry was created
             if ((calendarFormatter.string(from: date)) == (dateFormat.string(from:entry.date))) {
-                // print o that matches the date
-                let moodThatDay = (entry.mood.mood)!
+                if(entry.mood.mood != nil) {
+                    moodThatDay = (entry.mood.mood)!
+                }
                 //print("date matches entry: \(moodThatDay)")
                 
                 var allActivities: [String] = []

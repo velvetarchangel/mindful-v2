@@ -96,8 +96,42 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    // sets the maximum date that the user can select - maximum date is set to current date, which user cannot select beyond
+    func maximumDate(for calendar: FSCalendar) -> Date {
+        return Date()
+    }
+    
+    @IBOutlet weak var dateSelectedLabel: UILabel!
+    // actions upon selecting a date
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        calendarFormatter.dateFormat = "yyyy-MM-dd"
+        print("Date Selected == \(calendarFormatter.string(from: date))")
+        for entry in entryList {
+            let dateFormat = DateFormatter()
+            dateFormat.dateFormat = "yyyy-MM-dd"
+            let dateStr = " \(dateFormat.string(from:entry.date))"
+            
+            // if current date ac
+            if ((calendarFormatter.string(from: date)) == (dateFormat.string(from:entry.date))) {
+                // print o that matches the date
+                let moodThatDay = (entry.mood.mood)!
+                print("date matches entry: \(moodThatDay)")
+                
+                var allActivities: [String] = []
+                for a in (entry.activities) {
+                    let activityStr = (a.activity) ?? ""
+                    allActivities.append(activityStr)
+                }
+                let activitiesFormatted = (allActivities.map{String($0)}).joined(separator: ", ") // format list of activities
+                print("moods that matches entry: \(activitiesFormatted)")
+                let entryThatDay = "\(moodThatDay) - \(activitiesFormatted)"
+                dateSelectedLabel.text = "\(entryThatDay)"
+            }
+        }
+    }
+    
     func fetchData(){
-        db.collection("entries").order(by: "date", descending: true).limit(to: 5).getDocuments() { (querySnapshot, err) in
+        db.collection("entries").order(by: "date", descending: true).getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -142,6 +176,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                         anEntry.date = (entry?.date)!
 //                        print("Date: \(anEntry.date)")
                         dateStr = " \(dateFormatterPrint.string(from: anEntry.date))"
+                        print("ENTRY DATE: \((entry?.date)!)")
                     }
                     self.entryList.append(anEntry) // append to list of entries
                     let tableString = "\(moodStr) - \(activitiesStr) on \(dateStr)"
@@ -180,6 +215,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             let dateFormatterPrint = DateFormatter()
             dateFormatterPrint.dateFormat = "MMM dd,yyyy - HH:mm"
             let dateStr = " \(dateFormatterPrint.string(from:e.date))"
+            print("DATE: \(dateStr)")
             let tableString = "\(dateStr)\n\(moodStr) - \(activitiesFormatted)"
             moodList.append(tableString)
         }

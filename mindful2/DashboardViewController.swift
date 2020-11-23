@@ -20,13 +20,11 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var myData = ["first", "second", "third", "fourth", "fifth"]
     var calendarFormatter = DateFormatter()
+    let fillDefaultColors = ["2020/10/08": UIColor.purple, "2020/10/06": UIColor.green, "2020/10/18": UIColor.cyan, "2020/10/22": UIColor.yellow, "2020/11/08": UIColor.purple, "2015/11/06": UIColor.green, "2015/11/18": UIColor.cyan, "2020/11/22": UIColor.yellow, "2020/12/08": UIColor.purple, "2020/12/06": UIColor.green, "2020/12/18": UIColor.cyan, "2020/12/22": UIColor.magenta]
     
     //MARK :- Delete later
     var event = ["2020-11-08", "2020-11-09"]
-//    var fillSelectionColors = [Entry(date: Date("2020-11-10"), mood: "Happy", Activities: []),
-//                               Entry(date: Date("2020-11-11"), mood: "Sad", Activities: []),
-//                            ]
-        
+    
     override func viewDidLoad(){
         super.viewDidLoad()
         tableView.delegate = self
@@ -43,57 +41,40 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     
-//  **somehow parse data and figure out logic to change background color here**
-//  func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
-//        var colorBackgrounds = [UIImage]() //HAVE ALL THE POSSIBLE IMAGES
-//
-//        /*
-//         if DATE IS THE SAME AND EMOTION = HAPPY -> RETURN HAPPY
-//         ...
-//         */
-//        return UIImage(named: "happyback2.png")
-//    }
-
-    func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {
-        var picture = UIImage(named:"happyback2.png")
-        
-//        db.collection("entries").order(by: "date").getDocuments() { (querySnapshot, err) in
-//            if let err = err {
-//                print("Error getting data : \(err)")
-//            }else {
-//                var entryMoodString = ""
-//                for document in querySnapshot!.documents {
-//                    let entry = try? document.data(as: Entry.self)
-//                    if (entry?.mood == nil) {
-//                        print("Not logged today")
-//                    }else{
-//                        let moodWrap = (entry?.mood)!
-//                        entryMoodString = (moodWrap.mood)! // mood as a String
-//                        print("\(entry?.date) + \(entryMoodString)")
-//                    }
-//                }
-//                self.tableView.reloadData()
-//            }
-//        }
-        return picture
-    }
+    //DATE FORMATTERS
+    fileprivate lazy var dateFormatter1: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        return formatter
+    }()
     
-    //DATE FORMATTER 2
     fileprivate lazy var dateFormatter2: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
 
-    private func calendar(_ calendar:FSCalendar, appearance: FSCalendarAppearance, eventDefaultColorsFor date: Date) -> UIColor? {
-        return UIColor.purple
+    //MARK :- Calendar Functions
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        let key = self.dateFormatter1.string(from: date)
+        if let color = self.fillDefaultColors[key] {
+            return color
+        }
+        return nil
     }
-    
+
     func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
         let cell = Calendar.dequeueReusableCell(withIdentifier: "calendarcell", for: date, at: position)
         cell.clipsToBounds = true
         cell.contentMode = .center
         return cell
+    }
+    
+    /*
+        This function is supposed to keep an array of dates and figure out which color each one should be. It should populate the fill default array which can then be read in order to fill out the colors on the calendar.
+     */
+    func populateFillDefaultColors() {
+        
     }
     
     // sets the maximum date that the user can select - maximum date is set to current date, which user cannot select beyond
@@ -105,7 +86,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     // actions upon selecting a date
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         calendarFormatter.dateFormat = "yyyy-MM-dd"
-        print("Date Selected == \(calendarFormatter.string(from: date))")
+        //print("Date Selected == \(calendarFormatter.string(from: date))")
         for entry in entryList {
             let dateFormat = DateFormatter()
             dateFormat.dateFormat = "yyyy-MM-dd"
@@ -115,7 +96,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             if ((calendarFormatter.string(from: date)) == (dateFormat.string(from:entry.date))) {
                 // print o that matches the date
                 let moodThatDay = (entry.mood.mood)!
-                print("date matches entry: \(moodThatDay)")
+                //print("date matches entry: \(moodThatDay)")
                 
                 var allActivities: [String] = []
                 for a in (entry.activities) {
@@ -123,7 +104,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                     allActivities.append(activityStr)
                 }
                 let activitiesFormatted = (allActivities.map{String($0)}).joined(separator: ", ") // format list of activities
-                print("moods that matches entry: \(activitiesFormatted)")
+                //print("moods that matches entry: \(activitiesFormatted)")
                 let entryThatDay = "\(moodThatDay) - \(activitiesFormatted)"
                 dateSelectedLabel.text = "\(entryThatDay)"
             }
@@ -176,7 +157,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                         anEntry.date = (entry?.date)!
 //                        print("Date: \(anEntry.date)")
                         dateStr = " \(dateFormatterPrint.string(from: anEntry.date))"
-                        print("ENTRY DATE: \((entry?.date)!)")
+                        //print("ENTRY DATE: \((entry?.date)!)")
                     }
                     self.entryList.append(anEntry) // append to list of entries
                     let tableString = "\(moodStr) - \(activitiesStr) on \(dateStr)"
@@ -215,7 +196,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             let dateFormatterPrint = DateFormatter()
             dateFormatterPrint.dateFormat = "MMM dd,yyyy - HH:mm"
             let dateStr = " \(dateFormatterPrint.string(from:e.date))"
-            print("DATE: \(dateStr)")
+            //print("DATE: \(dateStr)")
             let tableString = "\(dateStr)\n\(moodStr) - \(activitiesFormatted)"
             moodList.append(tableString)
         }

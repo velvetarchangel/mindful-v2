@@ -20,7 +20,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var myData = ["first", "second", "third", "fourth", "fifth"]
     var calendarFormatter = DateFormatter()
-    let fillDefaultColors = ["2020/10/08": UIColor.purple, "2020/10/06": UIColor.green, "2020/10/18": UIColor.cyan, "2020/10/22": UIColor.yellow, "2020/11/08": UIColor.purple, "2015/11/06": UIColor.green, "2015/11/18": UIColor.cyan, "2020/11/22": UIColor.yellow, "2020/12/08": UIColor.purple, "2020/12/06": UIColor.green, "2020/12/18": UIColor.cyan, "2020/12/22": UIColor.magenta]
+    var fillDefaultColors : [String: UIColor] = [:]
     
     //MARK :- Delete later
     var event = ["2020-11-08", "2020-11-09"]
@@ -150,13 +150,28 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                     }
                     
                     var dateStr = ""
+                    var bgDateStr = ""      // THIS IS FOR THE BACKGROUND FILL ARRAY
                     if (entry?.date != nil) {
                         let dateFormatterPrint = DateFormatter()
                         dateFormatterPrint.dateFormat = "MMM dd,yyyy - HH:mm"
+                        let bgDateFormatterPrint = DateFormatter()
+                        bgDateFormatterPrint.dateFormat = "yyyy/MM/dd"
                         
                         anEntry.date = (entry?.date)!
 //                        print("Date: \(anEntry.date)")
                         dateStr = " \(dateFormatterPrint.string(from: anEntry.date))"
+                        bgDateStr = "\(bgDateFormatterPrint.string(from: anEntry.date))"
+                        if (self.fillDefaultColors[bgDateStr] == nil){
+                            if (anEntry.mood.mood == "Happy"){
+                                self.fillDefaultColors[bgDateStr] =  UIColor(red: 0.40, green: 0.75, blue: 0.65, alpha: 1.00)
+                            }else if (anEntry.mood.mood == "Meh"){
+                                self.fillDefaultColors[bgDateStr] = UIColor(red: 0.98, green: 0.72, blue: 0.48, alpha: 1.00)
+                            }else if (anEntry.mood.mood == "Bad") {
+                                self.fillDefaultColors[bgDateStr] = UIColor(red: 0.98, green: 0.54, blue: 0.48, alpha: 1.00)
+                            }else if (anEntry.mood.mood == "Content") {
+                                self.fillDefaultColors[bgDateStr] = UIColor(red: 0.62, green: 0.80, blue: 0.75, alpha: 1.00)
+                            }
+                        }
                         //print("ENTRY DATE: \((entry?.date)!)")
                     }
                     self.entryList.append(anEntry) // append to list of entries

@@ -21,6 +21,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     var myData = ["first", "second", "third", "fourth", "fifth"]
     var calendarFormatter = DateFormatter()
     var fillDefaultColors : [String: UIColor] = [:]
+    var newestEntry : [String: Entry] = [:]
 
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -76,6 +77,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var dateSelectedLabel: UILabel!
     // actions upon selecting a date
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
         calendarFormatter.dateFormat = "yyyy-MM-dd"
         //print("Date Selected == \(calendarFormatter.string(from: date))")
         for entry in entryList {
@@ -83,21 +85,27 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             dateFormat.dateFormat = "yyyy-MM-dd"
             let dateStr = " \(dateFormat.string(from:entry.date))"
             
-            // if current date ac
+            var moodThatDay = ""
+            // if the selected date matches the date the entry was created
             if ((calendarFormatter.string(from: date)) == (dateFormat.string(from:entry.date))) {
-                // print o that matches the date
-                let moodThatDay = (entry.mood.mood)!
-                //print("date matches entry: \(moodThatDay)")
-                
-                var allActivities: [String] = []
-                for a in (entry.activities) {
-                    let activityStr = (a.activity) ?? ""
-                    allActivities.append(activityStr)
+                // check if the date already exists in the dictionary
+                if (self.newestEntry[dateFormat.string(from:entry.date)] == nil) {
+                    if(entry.mood.mood != nil) {
+                        moodThatDay = (entry.mood.mood)!
+                    }
+                    //print("date matches entry: \(moodThatDay)")
+                    
+                    var allActivities: [String] = []
+                    for a in (entry.activities) {
+                        let activityStr = (a.activity) ?? ""
+                        allActivities.append(activityStr)
+                    }
+                    let activitiesFormatted = (allActivities.map{String($0)}).joined(separator: ", ") // format list of activities
+                    //print("moods that matches entry: \(activitiesFormatted)")
+                    let entryThatDay = "\(moodThatDay) - \(activitiesFormatted)"
+                    dateSelectedLabel.text = "\(entryThatDay)"
+                    self.newestEntry[dateFormat.string(from:entry.date)] = entry
                 }
-                let activitiesFormatted = (allActivities.map{String($0)}).joined(separator: ", ") // format list of activities
-                //print("moods that matches entry: \(activitiesFormatted)")
-                let entryThatDay = "\(moodThatDay) - \(activitiesFormatted)"
-                dateSelectedLabel.text = "\(entryThatDay)"
             }
         }
     }
@@ -159,7 +167,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                                 self.fillDefaultColors[bgDateStr] =  UIColor(red: 0.40, green: 0.75, blue: 0.65, alpha: 1.00)
                             }else if (anEntry.mood.mood == "Meh"){
                                 self.fillDefaultColors[bgDateStr] = UIColor(red: 0.98, green: 0.72, blue: 0.48, alpha: 1.00)
-                            }else if (anEntry.mood.mood == "Bad") {
+                            }else if (anEntry.mood.mood == "Sad") {
                                 self.fillDefaultColors[bgDateStr] = UIColor(red: 0.98, green: 0.54, blue: 0.48, alpha: 1.00)
                             }else if (anEntry.mood.mood == "Content") {
                                 self.fillDefaultColors[bgDateStr] = UIColor(red: 0.62, green: 0.80, blue: 0.75, alpha: 1.00)

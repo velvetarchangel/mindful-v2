@@ -75,18 +75,14 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         return Date()
     }
     
-    @IBOutlet weak var dateSelectedLabel: UILabel!
     // actions upon selecting a date
-    //@IBOutlet weak var popUp: UIView!
-    //@IBOutlet weak var centerPopupConstraint: NSLayoutConstraint!
     @IBOutlet weak var popUp: UIView!
-
-    @IBOutlet var moodImage: UIImageView!
-    @IBOutlet weak var Activity1: UIImageView!
-    @IBOutlet weak var Activity2: UIImageView!
-    @IBOutlet weak var Activity3: UIImageView!
-    @IBOutlet weak var Activity4: UIImageView!
-    @IBOutlet weak var Activity5: UIImageView!
+    @IBOutlet public weak var moodImage: UIImageView!
+    @IBOutlet public weak var Activity1: UIImageView!
+    @IBOutlet public weak var Activity2: UIImageView!
+    @IBOutlet public weak var Activity3: UIImageView!
+    @IBOutlet public weak var Activity4: UIImageView!
+    @IBOutlet public weak var Activity5: UIImageView!
     
     func getActivityImage(activity: String) -> UIImage? {
         let _ = ["Sleep well" : UIImage(named: "Sleep.png"), "Hobbies" : UIImage(named: "Hobby.png"), "Relax" : UIImage(named: "Meditate.png"), "Socialize" : UIImage(named: "People.png"),"Eat Well" : UIImage(named: "Apple.png"),"Exercise" : UIImage(named: "dumbell.png")]
@@ -109,19 +105,20 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         calendarFormatter.dateFormat = "yyyy-MM-dd"
 
-        //print("Date Selected == \(calendarFormatter.string(from: date))")
         for entry in entryList {
             let dateFormat = DateFormatter()
             dateFormat.dateFormat = "yyyy-MM-dd"
-            let dateStr = " \(dateFormat.string(from:entry.date))"
+            //let dateStr = " \(dateFormat.string(from:entry.date))"
             
             var moodThatDay = ""
             // if the selected date matches the date the entry was created
             if ((calendarFormatter.string(from: date)) == (dateFormat.string(from:entry.date))) {
+                
                 // check if the date already exists in the dictionary
                 if (self.newestEntry[dateFormat.string(from:entry.date)] == nil) {
                     if(entry.mood.mood != nil) {
                         moodThatDay = (entry.mood.mood)!
+                        self.moodImage.image = nil
                         if(moodThatDay == "Happy"){
                             self.moodImage.image =  UIImage(named: "happy.png")!
                         }else if(moodThatDay == "Sad") {
@@ -140,6 +137,11 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                         let activityStr = (a.activity) ?? ""
                         allActivities.append(activityStr)
                     }
+                    self.Activity1.image = nil
+                    self.Activity2.image = nil
+                    self.Activity3.image = nil
+                    self.Activity4.image = nil
+                    self.Activity5.image = nil
                     if(allActivities.count > 0){
                         self.Activity1.image = getActivityImage(activity: allActivities[0])
                     }
@@ -150,16 +152,11 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                         self.Activity3.image = getActivityImage(activity: allActivities[2])
                     }
                     if(allActivities.count > 3){
-                    self.Activity4.image = getActivityImage(activity: allActivities[3])
+                        self.Activity4.image = getActivityImage(activity: allActivities[3])
                     }
                     if(allActivities.count > 4){
                         self.Activity5.image = getActivityImage(activity: allActivities[4])
                     }
-                    
-//                    let activitiesFormatted = (allActivities.map{String($0)}).joined(separator: ", ") // format list of activities
-//                    //print("moods that matches entry: \(activitiesFormatted)")
-//                    let entryThatDay = "\(moodThatDay) - \(activitiesFormatted)"
-//                    dateSelectedLabel.text = "\(entryThatDay)"
                     self.newestEntry[dateFormat.string(from:entry.date)] = entry
                 }
             }

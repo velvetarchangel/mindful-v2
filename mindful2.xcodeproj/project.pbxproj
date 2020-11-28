@@ -18,7 +18,6 @@
 		922D8FF425562BBA009621BA /* EntryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D8FF325562BBA009621BA /* EntryRepository.swift */; };
 		922D902325564291009621BA /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D902225564291009621BA /* Mood.swift */; };
 		922D902625564440009621BA /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D902525564440009621BA /* Activity.swift */; };
-		922D90292556456A009621BA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D90282556456A009621BA /* Image.swift */; };
 		922D902C25564614009621BA /* EntryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D902B25564614009621BA /* EntryListViewModel.swift */; };
 		922D902F2556466E009621BA /* EntryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D902E2556466E009621BA /* EntryCellViewModel.swift */; };
 		922D903225588C35009621BA /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D903125588C35009621BA /* DashboardViewController.swift */; };
@@ -42,7 +41,6 @@
 		922D8FF325562BBA009621BA /* EntryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryRepository.swift; sourceTree = "<group>"; };
 		922D902225564291009621BA /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		922D902525564440009621BA /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		922D90282556456A009621BA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		922D902B25564614009621BA /* EntryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListViewModel.swift; sourceTree = "<group>"; };
 		922D902E2556466E009621BA /* EntryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCellViewModel.swift; sourceTree = "<group>"; };
 		922D903125588C35009621BA /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				922D8FED255628A1009621BA /* Entry.swift */,
 				922D902225564291009621BA /* Mood.swift */,
 				922D902525564440009621BA /* Activity.swift */,
-				922D90282556456A009621BA /* Image.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,7 +255,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				922D8FEE255628A1009621BA /* Entry.swift in Sources */,
-				922D90292556456A009621BA /* Image.swift in Sources */,
 				922D8FB62553593A009621BA /* ViewController.swift in Sources */,
 				922D902F2556466E009621BA /* EntryCellViewModel.swift in Sources */,
 				922D902625564440009621BA /* Activity.swift in Sources */,

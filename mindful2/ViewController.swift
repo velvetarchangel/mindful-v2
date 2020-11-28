@@ -41,7 +41,6 @@ class ViewController:UIViewController{
     contentButton.backgroundColor = nil
     mehButton.backgroundColor = nil
     sadButton.backgroundColor = nil
-    print("Current mood is " + currentMood.mood!)
   }
   
   @IBAction func sadButton(_ sender: UIButton, forEvent event: UIEvent) {
@@ -51,7 +50,6 @@ class ViewController:UIViewController{
     contentButton.backgroundColor = nil
     mehButton.backgroundColor = nil
     sadButton.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
-    print("Current mood is " + currentMood.mood!)
   }
   
   @IBAction func mehButton(_ sender: UIButton, forEvent event: UIEvent) {
@@ -61,7 +59,6 @@ class ViewController:UIViewController{
     contentButton.backgroundColor = nil
     mehButton.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
     sadButton.backgroundColor = nil
-    print("Current mood is " + currentMood.mood!)
   }
   
   @IBAction func contentButton(_ sender: UIButton, forEvent event: UIEvent) {
@@ -71,7 +68,6 @@ class ViewController:UIViewController{
     contentButton.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
     mehButton.backgroundColor = nil
     sadButton.backgroundColor = nil
-    print("Current mood is " + currentMood.mood!)
   }
   
   //Activity Button actions on tap
@@ -85,7 +81,6 @@ class ViewController:UIViewController{
       currentActivities.insert(eatwell)
       eatBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
-    print(currentActivities)
   }
   
   @IBAction func sleepWell(_ sender: UIButton, forEvent event: UIEvent) {
@@ -98,7 +93,6 @@ class ViewController:UIViewController{
       currentActivities.insert(sleepwell)
       sleepBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
-    print(currentActivities)
   }
   
   @IBAction func exercise(_ sender: UIButton, forEvent event: UIEvent) {
@@ -111,7 +105,6 @@ class ViewController:UIViewController{
       currentActivities.insert(exercise)
       exerciseBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
-    print(currentActivities)
   }
   
   @IBAction func socialize(_ sender: UIButton, forEvent event: UIEvent) {
@@ -124,7 +117,6 @@ class ViewController:UIViewController{
       currentActivities.insert(socialize)
       socializeBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
-    print(currentActivities)
   }
   
   @IBAction func hobbies(_ sender: UIButton, forEvent event: UIEvent) {
@@ -137,7 +129,6 @@ class ViewController:UIViewController{
       currentActivities.insert(hobbies)
       hobbiesBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
-    print(currentActivities)
   }
   
   
@@ -151,7 +142,6 @@ class ViewController:UIViewController{
       currentActivities.insert(relax)
       relaxBtn.backgroundColor = UIColor(red: 0.53, green: 0.57, blue: 0.69, alpha: 0.2)
     }
-    print(currentActivities)
   }
   
   @IBAction func addEntry(_ sender: UIButton, forEvent event: UIEvent) {
@@ -204,7 +194,6 @@ class ViewController:UIViewController{
     }
 
   override func viewDidLoad() {
-    print("Initial view loaded")
     //set the current date on the label
     setCurrentDate()
   }

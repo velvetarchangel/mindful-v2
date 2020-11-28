@@ -10,5 +10,4 @@ import UIKit
 
 struct Mood: Codable{
     var mood: String?
-    //var picture: Image
 }

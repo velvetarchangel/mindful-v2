@@ -9,5 +9,4 @@ import Foundation
 
 struct Activity: Codable, Hashable{
     var activity: String?
-    //var picture : Image
 }

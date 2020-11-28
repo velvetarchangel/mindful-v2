@@ -22,6 +22,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     var calendarFormatter = DateFormatter()
     var fillDefaultColors : [String: UIColor] = [:]
     var newestEntry : [String: Entry] = [:]
+    let moodToImage : [String : UIImage?] = ["Happy" : UIImage(named: "happy.png")]
 
     override func viewDidLoad(){
         super.viewDidLoad()
@@ -76,9 +77,38 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var dateSelectedLabel: UILabel!
     // actions upon selecting a date
+    //@IBOutlet weak var popUp: UIView!
+    //@IBOutlet weak var centerPopupConstraint: NSLayoutConstraint!
+    @IBOutlet weak var popUp: UIView!
+
+    @IBOutlet var moodImage: UIImageView!
+    @IBOutlet weak var Activity1: UIImageView!
+    @IBOutlet weak var Activity2: UIImageView!
+    @IBOutlet weak var Activity3: UIImageView!
+    @IBOutlet weak var Activity4: UIImageView!
+    @IBOutlet weak var Activity5: UIImageView!
+    
+    func getActivityImage(activity: String) -> UIImage? {
+        let _ = ["Sleep well" : UIImage(named: "Sleep.png"), "Hobbies" : UIImage(named: "Hobby.png"), "Relax" : UIImage(named: "Meditate.png"), "Socialize" : UIImage(named: "People.png"),"Eat Well" : UIImage(named: "Apple.png"),"Exercise" : UIImage(named: "dumbell.png")]
+        if(activity == "Sleep well"){
+            return UIImage(named: "Sleep.png")
+        }else if(activity == "Hobbies") {
+            return UIImage(named: "Hobby.png")
+        }else if(activity == "Relax"){
+            return UIImage(named: "Meditate.png")
+        }else if(activity == "Socialize"){
+            return UIImage(named: "People.png")
+        }else if(activity == "Eat Well"){
+            return UIImage(named: "Apple.png")
+        }else if(activity == "Exercise"){
+            return UIImage(named: "dumbell.png")
+        }
+        return nil
+    }
+    
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        
         calendarFormatter.dateFormat = "yyyy-MM-dd"
+
         //print("Date Selected == \(calendarFormatter.string(from: date))")
         for entry in entryList {
             let dateFormat = DateFormatter()
@@ -92,18 +122,44 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
                 if (self.newestEntry[dateFormat.string(from:entry.date)] == nil) {
                     if(entry.mood.mood != nil) {
                         moodThatDay = (entry.mood.mood)!
+                        if(moodThatDay == "Happy"){
+                            self.moodImage.image =  UIImage(named: "happy.png")!
+                        }else if(moodThatDay == "Sad") {
+                            self.moodImage.image = UIImage(named: "bad.png")
+                        }else if(moodThatDay == "Content") {
+                            self.moodImage.image = UIImage(named: "content.png")
+                        }else if(moodThatDay == "Meh"){
+                            self.moodImage.image = UIImage(named: "meh.png")
+                        }
                     }
                     //print("date matches entry: \(moodThatDay)")
                     
                     var allActivities: [String] = []
+
                     for a in (entry.activities) {
                         let activityStr = (a.activity) ?? ""
                         allActivities.append(activityStr)
                     }
-                    let activitiesFormatted = (allActivities.map{String($0)}).joined(separator: ", ") // format list of activities
-                    //print("moods that matches entry: \(activitiesFormatted)")
-                    let entryThatDay = "\(moodThatDay) - \(activitiesFormatted)"
-                    dateSelectedLabel.text = "\(entryThatDay)"
+                    if(allActivities.count > 0){
+                        self.Activity1.image = getActivityImage(activity: allActivities[0])
+                    }
+                    if(allActivities.count > 1){
+                        self.Activity2.image = getActivityImage(activity: allActivities[1])
+                    }
+                    if(allActivities.count > 2){
+                        self.Activity3.image = getActivityImage(activity: allActivities[2])
+                    }
+                    if(allActivities.count > 3){
+                    self.Activity4.image = getActivityImage(activity: allActivities[3])
+                    }
+                    if(allActivities.count > 4){
+                        self.Activity5.image = getActivityImage(activity: allActivities[4])
+                    }
+                    
+//                    let activitiesFormatted = (allActivities.map{String($0)}).joined(separator: ", ") // format list of activities
+//                    //print("moods that matches entry: \(activitiesFormatted)")
+//                    let entryThatDay = "\(moodThatDay) - \(activitiesFormatted)"
+//                    dateSelectedLabel.text = "\(entryThatDay)"
                     self.newestEntry[dateFormat.string(from:entry.date)] = entry
                 }
             }

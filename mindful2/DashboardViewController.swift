@@ -19,6 +19,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     @Published var entryRepository = EntryRepository()
     
     var myData = ["first", "second", "third", "fourth", "fifth"]
+    var myDataMood = ["first", "second", "third", "fourth", "fifth"]
     var calendarFormatter = DateFormatter()
     var fillDefaultColors : [String: UIColor] = [:]
     var newestEntry : [String: Entry] = [:]
@@ -251,6 +252,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     func listEntries() {
 //        print("------------- list entries function --------------")
         var moodList: [String] = []
+        var tempMood: [String] = []
         for e in self.entryList {
 //            print("MOOD")
             let moodStr = (e.mood.mood) ?? "none"
@@ -269,8 +271,10 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             //print("DATE: \(dateStr)")
             let tableString = "\(dateStr)\n\(moodStr) - \(activitiesFormatted)"
             moodList.append(tableString)
+            tempMood.append(moodStr)
         }
         myData = moodList
+        myDataMood = tempMood
     }
 
     func tableView(_ tableview: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -278,10 +282,38 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.numberOfLines = 0;
-        cell.textLabel?.lineBreakMode = .byWordWrapping
-        cell.textLabel?.text = myData[indexPath.row]
+        // returns a reusable cell object for specified identifier
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DashboardTableViewCell
+        print(myDataMood[indexPath.row])
+        if(myDataMood[indexPath.row] == "Happy") {
+            cell.moodImageView.image = UIImage(named: "happy.png")
+        } else if (myDataMood[indexPath.row] == "Sad") {
+            cell.moodImageView.image = UIImage(named: "bad.png")
+        } else if (myDataMood[indexPath.row] == "Content") {
+            cell.moodImageView.image = UIImage(named: "content.png")
+        } else if (myDataMood[indexPath.row] == "Meh") {
+            cell.moodImageView.image = UIImage(named: "meh.png")
+        } else {
+            cell.moodImageView.image = nil
+        }
+    
+        cell.moodLabel?.numberOfLines = 0;
+        cell.moodLabel?.lineBreakMode = .byWordWrapping
+        print(myData[indexPath.row])
+        cell.moodLabel.text = myData[indexPath.row]
         return cell
     }
+    
+//    func tableView(_ tableview: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return myData.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        // returns a reusable cell object for specified identifier
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        cell.textLabel?.numberOfLines = 0;
+//        cell.textLabel?.lineBreakMode = .byWordWrapping
+//        cell.textLabel?.text = myData[indexPath.row]
+//        return cell
+//    }
 }

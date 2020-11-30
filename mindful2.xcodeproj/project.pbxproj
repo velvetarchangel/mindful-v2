@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		360FFF0125747E4B0051C3B3 /* DashboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360FFF0025747E4B0051C3B3 /* DashboardTableViewCell.swift */; };
 		922D8FB22553593A009621BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D8FB12553593A009621BA /* AppDelegate.swift */; };
 		922D8FB42553593A009621BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D8FB32553593A009621BA /* SceneDelegate.swift */; };
 		922D8FB62553593A009621BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922D8FB52553593A009621BA /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		1D4557FD026D2E2D26B7EA3D /* Pods-mindful2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindful2.release.xcconfig"; path = "Target Support Files/Pods-mindful2/Pods-mindful2.release.xcconfig"; sourceTree = "<group>"; };
+		360FFF0025747E4B0051C3B3 /* DashboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTableViewCell.swift; sourceTree = "<group>"; };
 		5F858C386C80AEAFCCBCBBAC /* Pods_mindful2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mindful2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D4A98C9AA03E7AD7AF29DD /* Pods-mindful2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mindful2.debug.xcconfig"; path = "Target Support Files/Pods-mindful2/Pods-mindful2.debug.xcconfig"; sourceTree = "<group>"; };
 		922D8FAE2553593A009621BA /* mindful2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mindful2.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 				922D8FB32553593A009621BA /* SceneDelegate.swift */,
 				922D8FB52553593A009621BA /* ViewController.swift */,
 				922D903125588C35009621BA /* DashboardViewController.swift */,
+				360FFF0025747E4B0051C3B3 /* DashboardTableViewCell.swift */,
 				922D8FB72553593A009621BA /* Main.storyboard */,
 				922D8FBA25535943009621BA /* Assets.xcassets */,
 				922D8FBC25535943009621BA /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 				922D8FB42553593A009621BA /* SceneDelegate.swift in Sources */,
 				922D903225588C35009621BA /* DashboardViewController.swift in Sources */,
 				922D902325564291009621BA /* Mood.swift in Sources */,
+				360FFF0125747E4B0051C3B3 /* DashboardTableViewCell.swift in Sources */,
 				922D8FF425562BBA009621BA /* EntryRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

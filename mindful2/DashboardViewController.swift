@@ -267,9 +267,9 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
             
             let dateFormatterPrint = DateFormatter()
             dateFormatterPrint.dateFormat = "MMM dd,yyyy - HH:mm"
-            let dateStr = " \(dateFormatterPrint.string(from:e.date))"
+            let dateStr = "\(dateFormatterPrint.string(from:e.date))"
             //print("DATE: \(dateStr)")
-            let tableString = "\(dateStr)\n\(moodStr) - \(activitiesFormatted)"
+            let tableString = "\(dateStr)\n\(activitiesFormatted)"
             moodList.append(tableString)
             tempMood.append(moodStr)
         }
@@ -287,12 +287,16 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         print(myDataMood[indexPath.row])
         if(myDataMood[indexPath.row] == "Happy") {
             cell.moodImageView.image = UIImage(named: "happy.png")
+            cell.moodLabel.text = "Happy"
         } else if (myDataMood[indexPath.row] == "Sad") {
             cell.moodImageView.image = UIImage(named: "bad.png")
+            cell.moodLabel.text = "Sad"
         } else if (myDataMood[indexPath.row] == "Content") {
             cell.moodImageView.image = UIImage(named: "content.png")
+            cell.moodLabel.text = "Content"
         } else if (myDataMood[indexPath.row] == "Meh") {
             cell.moodImageView.image = UIImage(named: "meh.png")
+            cell.moodLabel.text = "Meh"
         } else {
             cell.moodImageView.image = nil
         }
@@ -300,7 +304,9 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.moodLabel?.numberOfLines = 0;
         cell.moodLabel?.lineBreakMode = .byWordWrapping
         print(myData[indexPath.row])
-        cell.moodLabel.text = myData[indexPath.row]
+        cell.dateActivityLabel.text = myData[indexPath.row]
+        cell.dateActivityLabel?.numberOfLines = 0;
+        cell.dateActivityLabel?.lineBreakMode = .byWordWrapping
         return cell
     }
     

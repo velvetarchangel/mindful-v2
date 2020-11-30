@@ -443,27 +443,47 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="75" id="0wZ-IK-jso" customClass="DashboardTableViewCell" customModule="mindful2" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="59" width="352" height="75"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="100" id="0wZ-IK-jso" customClass="DashboardTableViewCell" customModule="mindful2" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="59" width="352" height="100"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0wZ-IK-jso" id="0sG-4B-aMH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="352" height="75"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="352" height="100"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFv-Oe-33h">
-                                                            <rect key="frame" x="5" y="5" width="45" height="45"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AFv-Oe-33h">
+                                                            <rect key="frame" x="10" y="5" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="hAe-iu-aiL"/>
+                                                                <constraint firstAttribute="width" constant="40" id="p1i-83-FMJ"/>
+                                                            </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXR-dK-F1G">
-                                                            <rect key="frame" x="60" y="5" width="275" height="53"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXR-dK-F1G">
+                                                            <rect key="frame" x="55" y="5" width="285.33333333333331" height="20"/>
+                                                            <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0Y-pf-U7J">
+                                                            <rect key="frame" x="55" y="29" width="287" height="60"/>
+                                                            <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="zXR-dK-F1G" secondAttribute="trailing" constant="10" id="7DO-sG-Udw"/>
+                                                        <constraint firstAttribute="trailing" secondItem="N0Y-pf-U7J" secondAttribute="trailing" constant="10" id="7cr-QH-vGa"/>
+                                                        <constraint firstAttribute="bottom" secondItem="N0Y-pf-U7J" secondAttribute="bottom" constant="11" id="8cL-sb-tBd"/>
+                                                        <constraint firstItem="N0Y-pf-U7J" firstAttribute="leading" secondItem="AFv-Oe-33h" secondAttribute="trailing" constant="5" id="Hlj-yB-nbf"/>
+                                                        <constraint firstItem="zXR-dK-F1G" firstAttribute="top" secondItem="0sG-4B-aMH" secondAttribute="top" constant="5" id="OoC-h5-afD"/>
+                                                        <constraint firstItem="AFv-Oe-33h" firstAttribute="top" secondItem="0sG-4B-aMH" secondAttribute="top" constant="5" id="WdS-5f-Phj"/>
+                                                        <constraint firstItem="AFv-Oe-33h" firstAttribute="leading" secondItem="0sG-4B-aMH" secondAttribute="leading" constant="10" id="YRQ-xb-s8t"/>
+                                                        <constraint firstItem="N0Y-pf-U7J" firstAttribute="top" secondItem="zXR-dK-F1G" secondAttribute="bottom" constant="4" id="qqX-Tr-kb7"/>
+                                                        <constraint firstItem="zXR-dK-F1G" firstAttribute="leading" secondItem="0sG-4B-aMH" secondAttribute="leading" constant="56.670000000000002" id="uMp-0f-YsZ"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="dateActivityLabel" destination="N0Y-pf-U7J" id="Txe-tS-6yA"/>
                                                     <outlet property="moodImageView" destination="AFv-Oe-33h" id="SsN-RC-m9A"/>
                                                     <outlet property="moodLabel" destination="zXR-dK-F1G" id="m4h-dO-evF"/>
                                                 </connections>

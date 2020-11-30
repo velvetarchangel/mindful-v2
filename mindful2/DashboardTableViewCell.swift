@@ -11,6 +11,7 @@ class DashboardTableViewCell: UITableViewCell {
 
     @IBOutlet weak var moodImageView: UIImageView!
     @IBOutlet weak var moodLabel: UILabel!
+    @IBOutlet weak var dateActivityLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,10 +12,3 @@ Once the repository is cloned, if you do not have CocoaPods installed on your sy
 ```
 For running this app on the iOS Simulator, please ensure that the simulator is set to iPhone 11 Pro. 
 Disclaimer: Only works in portrait orientation.
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)

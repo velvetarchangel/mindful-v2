@@ -11,4 +11,5 @@ Once the repository is cloned, if you do not have CocoaPods installed on your sy
   pod install
 ```
 For running this app on the iOS Simulator, please ensure that the simulator is set to iPhone 11 Pro. 
+Open the mindful2.xcworkspace folder in XCode, queue up the simulator and then run the simulator.
 Disclaimer: Only works in portrait orientation.

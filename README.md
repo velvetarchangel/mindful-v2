@@ -1,14 +1,9 @@
 # Mindful
 
-Mindful is a native iOS application that allows users to log their daily mood and their daily activity.
+Mindful is a native iOS application that allows users to log their daily mood and their daily activities. Users are able to view their previous moods on a dashboard with a calendar view. Users are also able to see their last 5 moods in a list view.
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-git clone 
-```
 Once the repository is cloned, if you do not have CocoaPods installed on your system, please install CocoaPods https://cocoapods.org/
 
 ```bash

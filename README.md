@@ -14,7 +14,7 @@ For running this app on the iOS Simulator, please ensure that the simulator is s
 Open the mindful2.xcworkspace folder in XCode, queue up the simulator and then run the simulator.
 Disclaimer: Only works in portrait orientation.
 
-##Demo video for Mindful
+## Demo Video for Mindful
 
 [![Mindful Demo](https://img.youtube.com/vi/UIWlpIvs51c/0.jpg)]
 

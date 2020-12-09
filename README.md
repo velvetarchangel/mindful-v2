@@ -15,4 +15,4 @@ Open the mindful2.xcworkspace folder in XCode, queue up the simulator and then r
 Disclaimer: Only works in portrait orientation.
 
 ##Demo video for Mindful
-[![Mindful Demo]](https://www.youtube.com/watch?v=UIWlpIvs51c "Mindful Demo- Click to Watch!")
+[Mindful Demo](https://www.youtube.com/watch?v=UIWlpIvs51c "Mindful Demo- Click to Watch!")

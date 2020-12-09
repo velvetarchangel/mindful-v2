@@ -16,5 +16,6 @@ Disclaimer: Only works in portrait orientation.
 
 ## Demo Video for Mindful
 
-[![Mindful Demo Video](https://img.youtube.com/vi/UIWlpIvs51c/0.jpg)](http://www.youtube.com/watch?v=UIWlpIvs51c)
+<div align="center">
+[![Mindful Demo Video](https://img.youtube.com/vi/UIWlpIvs51c/0.jpg)](http://www.youtube.com/watch?v=UIWlpIvs51c)</div>
 
